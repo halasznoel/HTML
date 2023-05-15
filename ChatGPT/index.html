@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">My Website</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="home" class="jumbotron jumbotron-fluid bg-info text-white text-center fade-in">
+    <div class="container">
+      <h1 class="display-4">Welcome to My Website</h1>
+      <p class="lead">A simple and responsive website built with HTML, CSS, and Bootstrap.</p>
+    </div>
+  </header>
+
+  <section id="about" class="py-5 fade-in">
+    <div class="container">
+      <h2 class="text-center mb-4">About</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id semper felis. Nullam nec tempor metus, et fringilla neque. Sed nec tellus ac enim iaculis fermentum a vel lacus.</p>
+      <p>Integer eff enim vel sagittis fermentum. Sed consectetur enim eu felis consequat lobortis. Aliquam non facilisis tortor.</p>
+    </div>
+  </section>
+
+  <section id="services" class="py-5 bg-light fade-in">
+    <div class="container">
+      <h2 class="text-center mb-4">Services</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 zoom-in">
+            <img src="service1.jpg" class="card-img-top" alt="Service 1">
+            <div class="card-body">
+              <h5 class="card-title">Service 1</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 zoom-in">
+            <img src="service2.jpg" class="card-img-top" alt="Service 2">
+            <div class="card-body">
+              <h5 class="card-title">Service 2</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 zoom-in">
+            <img src="service3.jpg" class="card-img-top" alt="Service 3">
+            <div class="card-body">
+              <h5 class="card-title">Service 3</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-5 fade-in">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact</h2>
+      <div class="row">
+        <div class="col-md-6 slide-up">
+          <form>
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email address">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div class="col-md-6 slide-up">
+          <h5>Contact Information:</h5>
+          <p>123 Main Street</p>
+          <p>City, State ZIP</p>
+          <p>Email: info@example.com</p>
+          <p>Phone: 123-456-7890</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white text-center py-3 fade-in">
+    <p>&copy; 2023 My Website. All rights reserved.</p>
+  </footer>
+
+  <div class="back-to-top">
+    <i    class="fas fa-chevron-up"></i>
+</div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!-- Smooth Scroll Script -->
+<script>
+  $(document).ready(function() {
+    // Smooth scrolling when clicking on navbar links
+    $('a.nav-link').on('click', function(e) {
+      if (this.hash !== '') {
+        e.preventDefault();
+
+        const hash = this.hash;
+
+        $('html, body').animate(
+          {
+            scrollTop: $(hash).offset().top
+          },
+          800 // Adjust the animation speed as needed
+        );
+      }
+    });
+
+    // Show/hide back-to-top button
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 200) {
+        $('.back-to-top').fadeIn();
+      } else {
+        $('.back-to-top').fadeOut();
+      }
+    });
+
+    // Scroll to top when back-to-top button is clicked
+    $('.back-to-top').click(function() {
+      $('html, body').animate({ scrollTop: 0 }, 800);
+      return false;
+    });
+  });
+</script>
+</body>
+</html>
+
+
